@@ -1,13 +1,18 @@
 <template>
-  <HelloWorld />
+  <div>
+    <Intro />
+    <About />
+  </div>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld'
+import Intro from '../components/Intro'
+import About from '../components/About'
 
 export default {
   components: {
-    HelloWorld
+    Intro,
+    About
   }
 }
 </script>
