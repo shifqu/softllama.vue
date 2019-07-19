@@ -4,9 +4,7 @@
       <h2 :id="title.toLowerCase()" class="headline text-xs-center py-5 font-weight-bold text-uppercase blue-grey--text text--darken-3">{{ title }}</h2>
       <v-divider />
       <div class="py-5">
-        <div class="subheading blue-grey--text text--darken-3">
-          <slot></slot>
-        </div>
+        <slot></slot>
       </div>
     </v-container>
   </section>

@@ -1,6 +1,6 @@
 <template>
   <v-img
-    :src="require('../assets/background-1.jpg')"
+    :src="require('@/assets/background-1.jpg')"
     gradient="to top right, rgba(101,78,163,.85), rgba(255,121,19,.65)"
     height="75vh"
     position="left center"
@@ -11,7 +11,7 @@
           <v-avatar
             :size="200"
           >
-            <img :src="require('../assets/shifqu-avatar.jpg')" alt="avatar">
+            <img :src="require('@/assets/shifqu-avatar.jpg')" alt="avatar">
           </v-avatar>
           <h1 class="display-2 font-weight-bold text-uppercase mb-3">{{ name }}</h1>
           <div class="title font-weight-light text-uppercase mb-2">{{ function_ }}</div>

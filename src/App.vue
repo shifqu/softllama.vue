@@ -72,7 +72,10 @@ export default {
     title: 'softllama',
     subtitle: 'homepage',
     drawer: null,
-    items: [{ title: 'About', icon: 'question_answer' }]
+    items: [
+      { title: 'About', icon: 'person' },
+      { title: 'Skills', icon: 'keyboard' }
+    ]
   })
 }
 </script>
@@ -82,6 +85,6 @@ export default {
   cursor: pointer;
 }
 .section-layout:nth-child(odd) {
-  background: red;
+  background: rgba(101,78,163,.05);
 }
 </style>
