@@ -1,4 +1,5 @@
 # softllama.vue
+Website for softllama.net; Used technologies are vue.js and vuetify. Deploying is done to aws s3 bucket.
 
 ## Project setup
 ```
