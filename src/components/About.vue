@@ -9,7 +9,7 @@
         <strong>personalized</strong> solutions.
       </p>
       <p>
-        Sonny, the founder, is a <strong>medior Python developer</strong>
+        Sonny, the founder, is a <strong>medior Software developer</strong>
         with strong <strong>leadership and relationship-building</strong> skills.
       </p>
       <p>

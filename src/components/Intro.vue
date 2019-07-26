@@ -11,7 +11,7 @@
           <v-avatar
             :size="200"
           >
-            <img :src="require('@/assets/shifqu-avatar.jpg')" alt="avatar">
+            <img class="rotate-15d" :src="require('@/assets/sonny-avatar.png')" alt="avatar">
           </v-avatar>
           <h1 class="display-2 font-weight-bold text-uppercase mb-3">{{ name }}</h1>
           <div class="title font-weight-light text-uppercase mb-2">{{ function_ }}</div>
@@ -26,8 +26,14 @@
 export default {
   data: () => ({
     name: 'Sonny',
-    function_: 'Python Developer',
+    function_: 'Software Developer',
     experience_level: 'Medior'
   })
 }
 </script>
+
+<style scoped>
+img.rotate-15d {
+  transform: rotate(15deg)
+}
+</style>
