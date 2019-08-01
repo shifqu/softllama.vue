@@ -13,7 +13,7 @@
             class="my-3 clickable"
             contain
             height="50"
-            @click="$vuetify.goTo(0)"
+            @click="goToItem(0)"
           ></v-img>
         </v-list-tile>
       </v-list>
@@ -71,7 +71,7 @@ export default {
   data: () => ({
     title: 'softllama',
     subtitle: 'homepage',
-    drawer: null,
+    drawer: false,
     items: [
       { title: 'About', icon: 'person' },
       { title: 'Skills', icon: 'keyboard' }
@@ -83,8 +83,12 @@ export default {
       // (on ios at least) we have to scroll
       // at least one tick before $vuetify.goTo
       // works.
+      // We also want to close the drawer
+      // again after clicking.
+      const dest = item ? '#' + item.title.toLowerCase() : 0
       window.scrollBy(0, 1)
-      this.$vuetify.goTo('#' + item.title.toLowerCase())
+      this.$vuetify.goTo(dest)
+      this.drawer = !this.drawer
     }
   }
 }
