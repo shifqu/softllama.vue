@@ -9,7 +9,7 @@
       <v-layout align-center>
         <v-flex text-xs-center white--text shadowed-text>
           <v-avatar
-            :size="200"
+            :size="150"
           >
             <img class="rotate-15d" :src="require('@/assets/sonny-avatar.png')" alt="avatar">
           </v-avatar>
