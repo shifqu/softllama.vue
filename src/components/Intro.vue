@@ -9,7 +9,7 @@
       <v-layout align-center>
         <v-flex text-xs-center white--text shadowed-text>
           <v-avatar
-            :size="200"
+            :size="150"
           >
             <img :src="require('@/assets/shifqu-avatar.jpg')" alt="avatar">
           </v-avatar>
