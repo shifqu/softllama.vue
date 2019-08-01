@@ -3,15 +3,11 @@
     <v-btn
       v-show="fab"
       v-scroll="onScroll"
-      :style="{
-        bottom: value ? '80px' : ''
-      }"
       fab
-      dark
       fixed
       bottom
       right
-      color="deep-orange"
+      color="primary"
       @click="toTop"
     >
       <v-icon>keyboard_arrow_up</v-icon>
