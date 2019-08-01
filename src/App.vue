@@ -24,7 +24,7 @@
         <v-list-tile
           v-for="item in items"
           :key="item.title"
-          @click="$vuetify.goTo('#'+item.title.toLowerCase())"
+          @click="goToItem(item)"
         >
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
@@ -53,7 +53,7 @@
         </v-toolbar-side-icon>
       </v-menu>
       <v-toolbar-items v-for="item in items" :key="item.title" class="hidden-sm-and-down">
-        <v-btn flat @click="$vuetify.goTo('#'+item.title.toLowerCase())">
+        <v-btn flat @click="$vuetify.goTo('#' + item.title.toLowerCase())">
           <span class="mr-2">{{ item.title }}</span>
           <v-icon>{{ item.icon }}</v-icon>
         </v-btn>
@@ -76,7 +76,17 @@ export default {
       { title: 'About', icon: 'person' },
       { title: 'Skills', icon: 'keyboard' }
     ]
-  })
+  }),
+  methods: {
+    goToItem (item) {
+      // This method is used on mobile because
+      // (on ios at least) we have to scroll
+      // at least one tick before $vuetify.goTo
+      // works.
+      window.scrollBy(0, 1)
+      this.$vuetify.goTo('#' + item.title.toLowerCase())
+    }
+  }
 }
 </script>
 
