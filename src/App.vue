@@ -1,11 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-        v-model="drawer"
-        fixed
-        temporary
-        right
-    >
+    <v-navigation-drawer v-model="drawer" fixed temporary right>
       <v-list class="pa-1">
         <v-list-tile>
           <v-img
@@ -46,13 +41,14 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-menu class="hidden-md-and-up">
-        <v-toolbar-side-icon
-          slot="activator"
-          @click.stop="drawer = !drawer"
-        >
+        <v-toolbar-side-icon slot="activator" @click.stop="drawer = !drawer">
         </v-toolbar-side-icon>
       </v-menu>
-      <v-toolbar-items v-for="item in items" :key="item.title" class="hidden-sm-and-down">
+      <v-toolbar-items
+        v-for="item in items"
+        :key="item.title"
+        class="hidden-sm-and-down"
+      >
         <v-btn flat @click="$vuetify.goTo('#' + item.title.toLowerCase())">
           <span class="mr-2">{{ item.title }}</span>
           <v-icon>{{ item.icon }}</v-icon>
@@ -60,38 +56,38 @@
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
-      <router-view/>
+      <router-view />
     </v-content>
   </v-app>
 </template>
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
   data: () => ({
-    title: 'softllama',
-    subtitle: 'homepage',
+    title: "softllama",
+    subtitle: "homepage",
     drawer: false,
     items: [
-      { title: 'About', icon: 'person' },
-      { title: 'Skills', icon: 'keyboard' }
+      { title: "About", icon: "person" },
+      { title: "Skills", icon: "keyboard" }
     ]
   }),
   methods: {
-    goToItem (item) {
+    goToItem(item) {
       // This method is used on mobile because
       // (on ios at least) we have to scroll
       // at least one tick before $vuetify.goTo
       // works.
       // We also want to close the drawer
       // again after clicking.
-      const dest = item ? '#' + item.title.toLowerCase() : 0
-      window.scrollBy(0, 1)
-      this.$vuetify.goTo(dest)
-      this.drawer = !this.drawer
+      const dest = item ? "#" + item.title.toLowerCase() : 0;
+      window.scrollBy(0, 1);
+      this.$vuetify.goTo(dest);
+      this.drawer = !this.drawer;
     }
   }
-}
+};
 </script>
 
 <style>
@@ -99,6 +95,6 @@ export default {
   cursor: pointer;
 }
 .section-layout:nth-child(odd) {
-  background: rgba(101,78,163,.05);
+  background: rgba(101, 78, 163, 0.05);
 }
 </style>
