@@ -35,7 +35,11 @@ export default {
   data: () => ({
     items: [
       // Generated using a small python script by hitting 'https://konpa.github.io/devicon/devicon.git/devicon.json'
-      { name: 'amazonwebservices', icon: 'devicon-amazonwebservices-original', value: 66 },
+      {
+        name: 'amazonwebservices',
+        icon: 'devicon-amazonwebservices-original',
+        value: 66
+      },
       { name: 'css3', icon: 'devicon-css3-plain', value: 66 },
       { name: 'django', icon: 'devicon-django-plain', value: 80 },
       { name: 'docker', icon: 'devicon-docker-plain', value: 65 },
@@ -52,7 +56,7 @@ export default {
       { name: 'react', icon: 'devicon-react-original', value: 33 },
       { name: 'ssh', icon: 'devicon-ssh-plain', value: 90 },
       { name: 'vim', icon: 'devicon-vim-plain', value: 80 },
-      { name: 'vuejs', icon: 'devicon-vuejs-plain', value: 80 }
+      { name: 'vuejs', icon: 'devicon-vuejs-plain', value: 80 },
       { name: 'mongodb', icon: 'devicon-mongodb-plain-wordmark', value: 80 }
     ],
     used_colors: []
