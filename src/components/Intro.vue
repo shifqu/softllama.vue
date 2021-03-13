@@ -31,11 +31,11 @@
 <script>
 export default {
   data: () => ({
-    name: "Sonny",
-    function_: "Software Developer",
-    experience_level: "Senior"
+    name: 'Sonny',
+    function_: 'Software Developer',
+    experience_level: 'Senior'
   })
-};
+}
 </script>
 
 <style scoped>
