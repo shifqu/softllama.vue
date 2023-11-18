@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import Intro from "@/components/Intro";
-import About from "@/components/About";
-import Skills from "@/components/Skills";
-import GoToTopFAB from "@/components/GoToTopFAB";
+import Intro from '@/components/Intro'
+import About from '@/components/About'
+import Skills from '@/components/Skills'
+import GoToTopFAB from '@/components/GoToTopFAB'
 
 export default {
   components: {
@@ -20,5 +20,5 @@ export default {
     Skills,
     GoToTopFAB
   }
-};
+}
 </script>

@@ -63,31 +63,31 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
   data: () => ({
-    title: "softllama",
-    subtitle: "homepage",
+    title: 'softllama',
+    subtitle: 'homepage',
     drawer: false,
     items: [
-      { title: "About", icon: "person" },
-      { title: "Skills", icon: "keyboard" }
+      { title: 'About', icon: 'person' },
+      { title: 'Skills', icon: 'keyboard' }
     ]
   }),
   methods: {
-    goToItem(item) {
+    goToItem (item) {
       // This method is used on mobile because
       // (on ios at least) we have to scroll
       // at least one tick before $vuetify.goTo
       // works.
       // We also want to close the drawer
       // again after clicking.
-      const dest = item ? "#" + item.title.toLowerCase() : 0;
-      window.scrollBy(0, 1);
-      this.$vuetify.goTo(dest);
-      this.drawer = !this.drawer;
+      const dest = item ? '#' + item.title.toLowerCase() : 0
+      window.scrollBy(0, 1)
+      this.$vuetify.goTo(dest)
+      this.drawer = !this.drawer
     }
   }
-};
+}
 </script>
 
 <style>

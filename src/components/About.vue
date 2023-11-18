@@ -8,7 +8,7 @@
         <strong>personalized</strong> solutions.
       </p>
       <p>
-        Sonny, the founder, is a <strong>Software developer</strong> with strong
+        Sonny, the founder, is a <strong>Senior software developer</strong> with strong
         <strong>leadership and relationship-building</strong> skills.
       </p>
       <p>
@@ -24,11 +24,11 @@
 </template>
 
 <script>
-import SectionLayout from "@/components/SectionLayout";
+import SectionLayout from '@/components/SectionLayout'
 
 export default {
   components: {
     SectionLayout
   }
-};
+}
 </script>

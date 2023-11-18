@@ -7,11 +7,10 @@
   >
     <v-container fill-height>
       <v-layout align-center>
-        <v-flex text-xs-center white--text shadowed-text>
-          <v-avatar :size="150">
-            <img
-              class="rotate-15d"
-              :src="require('@/assets/sonny-avatar.png')"
+        <v-flex text-xs-center light-text shadowed-text>
+          <v-avatar :size="150" class="light-bg mb-2">
+            <v-img
+              :src="imageSource"
               alt="avatar"
             />
           </v-avatar>
@@ -21,7 +20,6 @@
           <div class="title font-weight-light text-uppercase mb-2">
             {{ function_ }}
           </div>
-          <div class="caption text-uppercase">{{ experience_level }}</div>
         </v-flex>
       </v-layout>
     </v-container>
@@ -31,15 +29,31 @@
 <script>
 export default {
   data: () => ({
-    name: 'Sonny',
-    function_: 'Software Developer',
-    experience_level: 'Senior'
-  })
+    name: 'SOFTLLAMA',
+    function_: 'IT Consultancy',
+    imageNumber: null,
+    imageSource: null
+  }),
+  methods: {
+    getRandomImage () {
+      let validValues = ['02', '04', '09', '16']
+      let i = Math.floor(Math.random() * validValues.length)
+      return validValues[i]
+    }
+  },
+  created () {
+    this.imageNumber = this.getRandomImage()
+    this.imageSource = require('@/assets/graphic-elements-' + this.imageNumber + '.png')
+  }
 }
 </script>
 
 <style scoped>
-img.rotate-15d {
-  transform: rotate(15deg);
+.light-bg {
+    background-color: #f5f5f5;
+    color: rgba(0,0,0,0.87);
+}
+.light-text {
+    color: #f5f5f5;
 }
 </style>
